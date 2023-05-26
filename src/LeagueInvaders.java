@@ -27,6 +27,7 @@ public class LeagueInvaders {
 		window.setPreferredSize(new Dimension(WIDTH, HEIGHT));
 		window.setVisible(true);
 		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		window.addKeyListener(panel);
 		window.pack();
 	}
 }
