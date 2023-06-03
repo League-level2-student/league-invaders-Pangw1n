@@ -14,9 +14,10 @@ public class GameObject {
 		this.y = y;
 		this.width = width;
 		this.height = height;
+		this.isActive = true;
 	}
 	
-	void update()
+	public void update()
 	{
 		
 	}
