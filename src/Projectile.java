@@ -33,10 +33,10 @@ public class Projectile extends GameObject{
 	public void draw(Graphics g)
 	{
 		if (gotImage) {
-			g.drawImage(image, x, y, width, height, null);
+			g.drawImage(image, x - width / 2, y - height / 2, width, height, null);
 		} else {
 			g.setColor(Color.YELLOW);
-	        g.fillRect(x, y, width, height);
+	        g.fillRect(x - width / 2, y - height / 2, width, height);
 		}
 	}
 	
