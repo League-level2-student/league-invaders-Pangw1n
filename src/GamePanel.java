@@ -108,6 +108,10 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
 		}
 		
 		objectManager.draw(g);
+		
+		g.setColor(Color.GREEN);
+		g.setFont(subtitleFont);
+		g.drawString("SCORE: " + objectManager.getScore(), 10, 50);
 	}
 	void drawEndState(Graphics g)
 	{
@@ -118,7 +122,7 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
 		g.setFont(titleFont);
 		g.drawString("GAME OVER", 100, 100);
 		g.setFont(subtitleFont);
-		g.drawString("You Killed " + " enemies", 135, 400);
+		g.drawString("You Killed " + objectManager.getScore() + " enemies", 135, 400);
 	}
 	
 	void moveRocketShip()
@@ -173,6 +177,8 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
 		    
 		    if (CurrentState == GAME)
 		    {
+		    	rocketShip = new RocketShip(250, 700, 50, 50);
+		    	objectManager = new ObjectManager(rocketShip);
 		    	startGame();
 		    }
 		    else if (CurrentState == END)

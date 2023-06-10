@@ -22,6 +22,7 @@ public class Projectile extends GameObject{
 	
 	public void update()
 	{
+		super.update();
 		Up();
 	}
 	

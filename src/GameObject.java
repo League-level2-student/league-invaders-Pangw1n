@@ -18,11 +18,11 @@ public class GameObject {
 		this.width = width;
 		this.height = height;
 		this.isActive = true;
-		collisionBox = new Rectangle(x, y, width, height);
+		collisionBox = new Rectangle(x - width / 2, y - height / 2, width, height);
 	}
 	
 	public void update()
 	{
-		collisionBox.setBounds(x, y, width, height);
+		collisionBox.setBounds(x - width / 2, y - height / 2, width, height);
 	}
 }
